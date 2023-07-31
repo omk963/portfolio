@@ -1,0 +1,471 @@
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+    --purple: #fed9e1;
+    --github: #2c2c2c;
+    --linkedin: #0a66c2;
+    --codepen: black;
+} /* variables*/
+
+/* Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    /*background-image: linear-gradient(to bottom right, lightblue, lavender);*/
+    background-image: url("bg-gradient.png");
+    /*background-repeat: no-repeat;
+    background-position: center;*/
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Header */
+.header {
+    background-color: #fed9e1;
+    box-shadow: 1px 1px 5px 0px gray;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+}
+
+/* Logo */
+.logo {
+    display: inline-block;
+    font-size: 60px;
+    margin-left: 25px;
+    background: url('program-bg.jpg');
+    background-size: cover;
+	background-clip: text;
+    -webkit-background-clip: text;
+	color: transparent;
+    font-family: "American Typewriter", serif;
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--purple);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.menu a {
+    display: block;
+    padding: 30px;
+    color: var(--black);
+}
+.menu a:hover {
+    background-color: rgb(214, 188, 255, 0.99);
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 15px 25px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--black);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--black);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon, need JS to close menu after event*/
+.side-menu:checked ~ nav{
+    max-height: 35%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+/* Responsiveness */
+@media (min-width: 760px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu a {
+        padding: 20px;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+    }
+
+    .hamb{
+        display: none;
+    }
+
+    .link {
+        transition: 0.3s ease;
+        background: #fed9e1;
+        color: var(--black);
+        font-size: 20px;
+        text-decoration: none;
+        border-top: 3px solid #fed9e1;
+        border-bottom: 3px solid #fed9e1;
+        margin: 0px;
+    }
+    .link:hover {
+        border-top: 4px solid #ffffff;
+        border-bottom: 4px solid #ffffff;
+        padding: 6px 10px;
+        margin: 10px;
+    }
+
+    body, .message {
+        background-size: 100% 100%;
+    }
+
+    .message {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .profile {
+        width: 35%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .grid {
+        padding: 0 10%;
+        width: 100%;
+    }
+}
+
+h1 {
+    font-family: "Sniglet", cursive;
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 15px;
+    background: url('code-bg1.jpg');
+    background-size: cover;
+	background-clip: text;
+    -webkit-background-clip: text;
+	color: transparent;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+img.profile {
+    border-radius: 500px;
+    border-width: 15px;
+    border-style: double;
+}
+
+#plane {
+    display: block;
+    width:auto;
+    min-height:fit-content;
+    max-height: 400px;
+    padding-top: 50px;
+    grid-column-start: 1;
+}
+
+#codepen {
+    border-radius: 50%;
+    height: 40px;
+}
+
+.about {
+    font-family: "Sniglet", cursive;
+    padding: 10px 40px;
+}
+
+.aboutp {
+    margin: 10px 0;
+}
+
+#mail {
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 4px 3px 5px white;
+    font-family: "Sniglet", cursive;
+}
+
+.message {
+    background-image: url("https://media0.giphy.com/media/jt2iqke49RyfmCjI6b/giphy.gif?cid=6c09b9525v7k8twx0xfodc0ky37nt9sw7j1rhwrhttdqcjua&ep=v1_stickers_related&rid=giphy.gif&ct=s");
+    background-repeat: space;
+    background-position: center;
+}
+
+form {
+    margin: 0px 10px;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+    position: relative;
+    grid-column-start: 2;
+}
+
+.form {
+    font-size: 1.5em;
+    padding-left: 10px;
+    text-shadow: 5px 3px 10px black;
+}
+
+.form,
+input,
+textarea,
+button {
+    display: block;
+    font-family: "Sniglet", cursive;
+}
+
+input,
+textarea,
+button {
+    width: 95%;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    font-family: "Sniglet", cursive;
+    font-size: 1em;
+    color: #676767;
+    transition: border 0.5s;
+    -webkit-transition: border 0.5s;
+    -moz-transition: border 0.5s;
+    -o-transition: border 0.5s;
+    border: solid 3px #dab1ff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border: solid 3px #a865ff;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+    overflow: auto;
+}
+
+button {
+    background-color: rgb(188, 150, 255);
+    color: white;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.29em;
+    font-family: "Sniglet", cursive;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #ee84fc;
+}
+
+label {
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+
+/* unvisited link 
+a:link {
+    color: rgb(39, 1, 88);
+}*/
+/* visited link 
+a:visited {
+    color: purple;
+}*/
+/* mouse over link 
+a:hover {
+    color: rgb(0, 4, 255);
+}*/
+/* selected link 
+a:active {
+    color: blue;
+}*/
+
+hr {
+    margin: 20px 10px;
+}
+
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.social-media-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    outline: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: grid;
+    place-items: center;
+}
+
+.social-media-button:hover {
+    outline-offset: 3px;
+    transition: 0.3s;
+}
+
+.social-media-button img {
+    transition: 0.3s;
+}
+
+.social-media-button:hover img {
+    transform: scale(1.75);
+}
+
+.social-media-button:hover:nth-child(1) {
+    background-color: var(--github);
+}
+
+.social-media-button:hover:nth-child(2) {
+    background-color: var(--linkedin);
+}
+
+.social-media-button:hover:nth-child(3) {
+    background-color: var(--codepen);
+}
+
+.container {
+    width: 100%;
+    max-height: max-content;
+    position: relative;
+}
+  
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    padding: 5px 20px;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+  
+.container:hover .image {
+    opacity: 0.3;
+}
+  
+.container:hover .middle {
+    opacity: 1;
+}
+  
+.text {
+    background-color: rgb(209, 152, 255);
+    color: var(--black);
+    font-size: 18px;
+    padding: 16px 32px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.container:nth-child(1)
+{
+    grid-area: 1 / 1;
+}
+.container:nth-child(2)
+{
+    grid-area: 1 / 2;
+}
+.container:nth-child(3)
+{
+    grid-area: 2 / 1;
+}
+.container:nth-child(4)
+{
+    grid-area: 2 / 2;
+}
+
+footer {
+    padding: 0 20px;
+    text-align: center;
+}
