@@ -195,7 +195,7 @@ a{
 }
 
 h1 {
-    -webkit-font-family: "Sniglet", cursive;
+    font-family: "Sniglet", cursive;
     font-size: 50px;
     text-align: center;
     padding-bottom: 15px;
@@ -234,7 +234,7 @@ img.profile {
 }
 
 .about {
-    -webkit-font-family: "Sniglet", cursive;
+    font-family: "Sniglet", cursive;
     padding: 10px 40px;
 }
 
@@ -246,7 +246,7 @@ img.profile {
     text-align: center;
     font-size: 25px;
     text-shadow: 4px 3px 5px white;
-    -webkit-font-family: "Sniglet", cursive;
+    font-family: "Sniglet", cursive;
 }
 
 .message {
