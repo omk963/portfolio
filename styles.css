@@ -115,7 +115,7 @@ a{
 
 /* Toggle menu icon, need JS to close menu after event*/
 .side-menu:checked ~ nav{
-    max-height: 312px;
+    max-height: 320px;
 }
 .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
