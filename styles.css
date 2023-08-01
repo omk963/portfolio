@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Righteous&family=Rye&family=Single+Day&family=Sniglet&display=swap');
+
 :root{
     --white: #f9f9f9;
     --black: #36383F;
@@ -51,7 +53,7 @@ a{
 	background-clip: text;
     -webkit-background-clip: text;
 	color: transparent;
-    font-family: "American Typewriter", serif;
+    font-family: 'Rye', cursive;
 }
 
 /* Nav menu */
@@ -201,8 +203,8 @@ a{
 }
 
 h1 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
+    font-family: 'Sniglet', cursive;
+    font-size: 60px;
     text-align: center;
     padding-bottom: 15px;
     background: url('code-bg1.jpg');
