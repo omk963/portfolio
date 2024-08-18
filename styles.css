@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Righteous&family=Rye&family=Single+Day&family=Sniglet&display=swap');
 
-:root{
+:root {
     --white: #f9f9f9;
     --black: #36383F;
     --gray: #85888C;
@@ -8,7 +8,9 @@
     --github: #2c2c2c;
     --linkedin: #0a66c2;
     --codepen: black;
-} /* variables*/
+}
+
+/* variables*/
 
 /* Reset */
 * {
@@ -19,7 +21,7 @@
 
 body {
     /*background-image: linear-gradient(to bottom right, lightblue, lavender);*/
-    background-image: url("bg-gradient.png");
+    background-image: url("./media/bg-gradient.png");
     /*background-repeat: no-repeat;
     background-position: center;*/
 }
@@ -28,7 +30,7 @@ ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -38,7 +40,7 @@ a{
     box-shadow: 1px 1px 5px 0px gray;
     position: sticky;
     top: 0;
-    width: 100%;
+    width: 102%;
     height: 80px;
     z-index: 1;
 }
@@ -48,16 +50,16 @@ a{
     display: inline-block;
     font-size: 60px;
     margin-left: 25px;
-    background: url('program-bg.jpg');
+    background: url('./media/program-bg.jpg');
     background-size: cover;
-	background-clip: text;
+    background-clip: text;
     -webkit-background-clip: text;
-	color: transparent;
+    color: transparent;
     font-family: 'Rye', cursive;
 }
 
 /* Nav menu */
-.nav{
+.nav {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -71,18 +73,21 @@ a{
     display: block;
     padding: 30px;
     color: var(--black);
-    font-family:cursive;
+    font-family: cursive;
 }
+
 .menu a:hover {
     background-color: rgb(214, 188, 255, 0.99);
 }
 
 /* Menu Icon */
-.hamb{
+.hamb {
     cursor: pointer;
     float: right;
     padding: 15px 25px;
-}/* Style label tag */
+}
+
+/* Style label tag */
 
 .hamb-line {
     background: var(--black);
@@ -90,10 +95,12 @@ a{
     height: 2px;
     position: relative;
     width: 24px;
-} /* Style span tag */
+}
+
+/* Style span tag */
 
 .hamb-line::before,
-.hamb-line::after{
+.hamb-line::after {
     background: var(--black);
     content: '';
     display: block;
@@ -102,36 +109,43 @@ a{
     transition: all .2s ease-out;
     width: 100%;
 }
-.hamb-line::before{
+
+.hamb-line::before {
     top: 5px;
 }
-.hamb-line::after{
+
+.hamb-line::after {
     top: -5px;
 }
 
 .side-menu {
     display: none;
-} /* Hide checkbox */
+}
+
+/* Hide checkbox */
 
 /* Toggle menu icon, need JS to close menu after event*/
-.side-menu:checked ~ nav{
+.side-menu:checked~nav {
     max-height: 320px;
 }
-.side-menu:checked ~ .hamb .hamb-line {
+
+.side-menu:checked~.hamb .hamb-line {
     background: transparent;
 }
-.side-menu:checked ~ .hamb .hamb-line::before {
+
+.side-menu:checked~.hamb .hamb-line::before {
     transform: rotate(-45deg);
-    top:0;
+    top: 0;
 }
-.side-menu:checked ~ .hamb .hamb-line::after {
+
+.side-menu:checked~.hamb .hamb-line::after {
     transform: rotate(45deg);
-    top:0;
+    top: 0;
 }
 
 /* Responsiveness */
 @media (min-width: 760px) {
-    .nav{
+    .nav {
         max-height: none;
         top: 0;
         position: relative;
@@ -140,7 +154,7 @@ a{
         background-color: transparent;
     }
 
-    .menu li{
+    .menu li {
         float: left;
     }
 
@@ -148,11 +162,11 @@ a{
         padding: 20px;
     }
 
-    .menu a:hover{
+    .menu a:hover {
         background-color: transparent;
     }
 
-    .hamb{
+    .hamb {
         display: none;
     }
 
@@ -166,6 +180,7 @@ a{
         border-bottom: 3px solid #fed9e1;
         margin: 0px;
     }
+
     .link:hover {
         border-top: 4px solid #ffffff;
         border-bottom: 4px solid #ffffff;
@@ -173,7 +188,8 @@ a{
         margin: 10px;
     }
 
-    body, .message {
+    body,
+    .message {
         background-size: 100% 100%;
     }
 
@@ -207,11 +223,11 @@ h1 {
     font-size: 60px;
     text-align: center;
     padding-bottom: 15px;
-    background: url('code-bg1.jpg');
+    background: url('./media/code-bg1.jpg');
     background-size: cover;
-	background-clip: text;
+    background-clip: text;
     -webkit-background-clip: text;
-	color: transparent;
+    color: transparent;
 }
 
 img {
@@ -229,8 +245,8 @@ img.profile {
 
 #plane {
     display: block;
-    width:auto;
-    min-height:fit-content;
+    width: auto;
+    min-height: fit-content;
     max-height: 400px;
     padding-top: 50px;
     grid-column-start: 1;
@@ -410,7 +426,7 @@ hr {
     max-height: max-content;
     position: relative;
 }
-  
+
 .image {
     opacity: 1;
     display: block;
@@ -420,7 +436,7 @@ hr {
     backface-visibility: hidden;
     padding: 5px 20px;
 }
-  
+
 .middle {
     transition: .5s ease;
     opacity: 0;
@@ -430,22 +446,22 @@ hr {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%)
 }
-  
+
 .container:hover .image {
     opacity: 0.3;
 }
-  
+
 .container:hover .middle {
     opacity: 1;
 }
-  
+
 .text {
     background-color: rgb(209, 152, 255);
     color: var(--black);
     font-size: 20px;
     padding: 16px 32px;
     text-align: center;
-    font-family:fantasy;
+    font-family: fantasy;
 }
 
 .grid {
@@ -454,20 +470,19 @@ hr {
     grid-template-rows: repeat(2, 1fr);
 }
 
-.container:nth-child(1)
-{
+.container:nth-child(1) {
     grid-area: 1 / 1;
 }
-.container:nth-child(2)
-{
+
+.container:nth-child(2) {
     grid-area: 1 / 2;
 }
-.container:nth-child(3)
-{
+
+.container:nth-child(3) {
     grid-area: 2 / 1;
 }
-.container:nth-child(4)
-{
+
+.container:nth-child(4) {
     grid-area: 2 / 2;
 }
 
