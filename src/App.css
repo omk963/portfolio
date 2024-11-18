@@ -1,0 +1,44 @@
+.font-face-rg {
+  font-family: "RubikGlitch";
+}
+
+.font-face-ssb {
+  font-family: "SilkScreen";
+  font-weight: bold;
+}
+
+.font-face-ssn {
+  font-family: "SilkScreen";
+  font-weight: normal;
+}
+
+.font-face-vt {
+  font-family: "VT323";
+}
+
+.emphasize {
+  font-weight: bold;
+  color: rgb(41, 123, 255);
+}
+
+.skillsSm {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border: rgb(124, 124, 124) 1px solid;
+  border-bottom: none;
+}
+
+.topShadow {
+  box-shadow: 0 -5px 10px rgb(134, 134, 134);
+}
+
+.skillBox {
+  border-right: 2px gray solid;
+  border-left: 2px gray solid;
+  box-shadow: 0 1px 10px rgb(153, 153, 153) inset;
+}
+
+.projectBox {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
