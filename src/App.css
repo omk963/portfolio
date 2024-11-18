@@ -37,8 +37,3 @@
   border-left: 2px gray solid;
   box-shadow: 0 1px 10px rgb(153, 153, 153) inset;
 }
-
-.projectBox {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-}
